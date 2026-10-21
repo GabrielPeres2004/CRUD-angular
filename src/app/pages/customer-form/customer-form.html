@@ -1,0 +1,57 @@
+<div class="page-header">
+  <h1>{{ isEdit() ? 'Editar cliente' : 'Novo cliente' }}</h1>
+</div>
+
+@if (error()) {
+  <div class="alert">{{ error() }}</div>
+}
+
+<div class="card">
+  @if (loading()) {
+    <p class="muted">Carregando cliente...</p>
+  } @else {
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <div class="field">
+        <label for="name">Nome *</label>
+        <input id="name" type="text" formControlName="name" [class.invalid]="fieldError('name')" />
+        @if (fieldError('name'); as message) {
+          <span class="field-error">{{ message }}</span>
+        }
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail *</label>
+        <input id="email" type="email" formControlName="email" [class.invalid]="fieldError('email')" />
+        @if (fieldError('email'); as message) {
+          <span class="field-error">{{ message }}</span>
+        }
+      </div>
+
+      <div class="field">
+        <label for="phone">Telefone *</label>
+        <input
+          id="phone"
+          type="text"
+          formControlName="phone"
+          placeholder="(11) 99999-1111"
+          [class.invalid]="fieldError('phone')"
+        />
+        @if (fieldError('phone'); as message) {
+          <span class="field-error">{{ message }}</span>
+        }
+      </div>
+
+      <div class="field">
+        <label for="address">Endereço</label>
+        <input id="address" type="text" formControlName="address" />
+      </div>
+
+      <div class="form-actions">
+        <a class="btn btn-secondary" routerLink="/customers">Cancelar</a>
+        <button class="btn" type="submit" [disabled]="saving()">
+          {{ saving() ? 'Salvando...' : 'Salvar' }}
+        </button>
+      </div>
+    </form>
+  }
+</div>

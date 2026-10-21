@@ -1,0 +1,13 @@
+.app-header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.brand {
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
