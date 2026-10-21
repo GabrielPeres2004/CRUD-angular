@@ -1,6 +1,6 @@
 # CRUD-Angular
 
-Front-end em **Angular** do CRUD de clientes. Consome a API REST do projeto [CRUD-Java](../CRUD-Java) (Spring Boot).
+Front-end em **Angular** do CRUD de clientes. Consome a API REST do projeto [CRUD-Java](https://github.com/GabrielPeres2004/CRUD-Java) (Spring Boot).
 
 ## 🛠️ Tecnologias
 
@@ -35,7 +35,7 @@ src/app
 ### Pré-requisitos
 
 - Node.js 20.19+ (ou 22.12+ / 24+)
-- API [CRUD-Java](../CRUD-Java) rodando em `http://localhost:8080`
+- API [CRUD-Java](https://github.com/GabrielPeres2004/CRUD-Java) rodando em `http://localhost:8080`
 
 ### Passos
 
