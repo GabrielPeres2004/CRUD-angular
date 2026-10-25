@@ -54,7 +54,7 @@ body {
   padding: 0.5rem 1rem;
   border: 1px solid transparent;
   border-radius: var(--radius);
-  background: var(--primary);
+  background: green;
   color: #fff;
   font: inherit;
   font-size: 0.9rem;
